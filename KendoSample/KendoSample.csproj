@@ -127,6 +127,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\etalage.css" />
+    <Content Include="Content\form.css" />
+    <Content Include="Content\fwslider.css" />
+    <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\Kendo\16x16\Chart.png" />
     <Content Include="Content\Kendo\16x16\ComboBox.png" />
     <Content Include="Content\Kendo\16x16\Grid.png" />
@@ -1019,6 +1023,7 @@
     <Content Include="Content\Kendo\window\armchair-402.png" />
     <Content Include="Content\Kendo\window\egg-chair.png" />
     <Content Include="Content\Kendo\window\kubus-armchair.png" />
+    <Content Include="Content\theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

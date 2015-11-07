@@ -25,6 +25,12 @@ namespace KendoSample
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/etalage.css",
+                      "~/Content/form.css",
+                      "~/Content/fwslider.css",
+                      "~/Content/jquery-ui.css",
+                      "~/Content/theme.css",
                       "~/Content/Kendo/kendo.default.min.css",
                       "~/Content/Kendo/kendo.common.min.css",
                       "~/Content/Kendo/kendo.rtl.min.css",
