@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE9D4768-AD8C-4437-9990-31FB72590559}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KendoSample</RootNamespace>
+    <AssemblyName>KendoSample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\packages\Kendo\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Kendo\16x16\Chart.png" />
+    <Content Include="Content\Kendo\16x16\ComboBox.png" />
+    <Content Include="Content\Kendo\16x16\Grid.png" />
+    <Content Include="Content\Kendo\16x16\Menu.png" />
+    <Content Include="Content\Kendo\16x16\PanelBar.png" />
+    <Content Include="Content\Kendo\16x16\Slider.png" />
+    <Content Include="Content\Kendo\16x16\Splitter.png" />
+    <Content Include="Content\Kendo\16x16\TabStrip.png" />
+    <Content Include="Content\Kendo\16x16\TreeView.png" />
+    <Content Include="Content\Kendo\16x16\Upload.png" />
+    <Content Include="Content\Kendo\24x24\Chart.png" />
+    <Content Include="Content\Kendo\24x24\ComboBox.png" />
+    <Content Include="Content\Kendo\24x24\Grid.png" />
+    <Content Include="Content\Kendo\24x24\Menu.png" />
+    <Content Include="Content\Kendo\24x24\PanelBar.png" />
+    <Content Include="Content\Kendo\24x24\Slider.png" />
+    <Content Include="Content\Kendo\24x24\Splitter.png" />
+    <Content Include="Content\Kendo\24x24\TabStrip.png" />
+    <Content Include="Content\Kendo\24x24\TreeView.png" />
+    <Content Include="Content\Kendo\24x24\Upload.png" />
+    <Content Include="Content\Kendo\32x32\Chart.png" />
+    <Content Include="Content\Kendo\32x32\ComboBox.png" />
+    <Content Include="Content\Kendo\32x32\Grid.png" />
+    <Content Include="Content\Kendo\32x32\Menu.png" />
+    <Content Include="Content\Kendo\32x32\PanelBar.png" />
+    <Content Include="Content\Kendo\32x32\Slider.png" />
+    <Content Include="Content\Kendo\32x32\Splitter.png" />
+    <Content Include="Content\Kendo\32x32\TabStrip.png" />
+    <Content Include="Content\Kendo\32x32\TreeView.png" />
+    <Content Include="Content\Kendo\32x32\Upload.png" />
+    <Content Include="Content\Kendo\48x48\Chart.png" />
+    <Content Include="Content\Kendo\48x48\ComboBox.png" />
+    <Content Include="Content\Kendo\48x48\Grid.png" />
+    <Content Include="Content\Kendo\48x48\Menu.png" />
+    <Content Include="Content\Kendo\48x48\PanelBar.png" />
+    <Content Include="Content\Kendo\48x48\Slider.png" />
+    <Content Include="Content\Kendo\48x48\Splitter.png" />
+    <Content Include="Content\Kendo\48x48\TabStrip.png" />
+    <Content Include="Content\Kendo\48x48\TreeView.png" />
+    <Content Include="Content\Kendo\48x48\Upload.png" />
+    <Content Include="Content\Kendo\Ajax\Editor.png" />
+    <Content Include="Content\Kendo\Ajax\Grid.png" />
+    <Content Include="Content\Kendo\Ajax\Scheduler.png" />
+    <Content Include="Content\Kendo\autocomplete\movies.png" />
+    <Content Include="Content\Kendo\autocomplete\palette.png" />
+    <Content Include="Content\Kendo\autocomplete\shipping.png" />
+    <Content Include="Content\Kendo\autocomplete\taxi.png" />
+    <Content Include="Content\Kendo\Black\editor.png" />
+    <Content Include="Content\Kendo\Black\imagebrowser.png" />
+    <Content Include="Content\Kendo\Black\indeterminate.gif" />
+    <Content Include="Content\Kendo\Black\loading-image.gif" />
+    <Content Include="Content\Kendo\Black\loading.gif" />
+    <Content Include="Content\Kendo\Black\loading_2x.gif" />
+    <Content Include="Content\Kendo\Black\markers.png" />
+    <Content Include="Content\Kendo\Black\markers_2x.png" />
+    <Content Include="Content\Kendo\Black\slider-h.gif" />
+    <Content Include="Content\Kendo\Black\slider-v.gif" />
+    <Content Include="Content\Kendo\Black\sprite.png" />
+    <Content Include="Content\Kendo\Black\sprite_2x.png" />
+    <Content Include="Content\Kendo\Black\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Black\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\BlueOpal\editor.png" />
+    <Content Include="Content\Kendo\BlueOpal\imagebrowser.png" />
+    <Content Include="Content\Kendo\BlueOpal\indeterminate.gif" />
+    <Content Include="Content\Kendo\BlueOpal\loading-image.gif" />
+    <Content Include="Content\Kendo\BlueOpal\loading.gif" />
+    <Content Include="Content\Kendo\BlueOpal\loading_2x.gif" />
+    <Content Include="Content\Kendo\BlueOpal\markers.png" />
+    <Content Include="Content\Kendo\BlueOpal\markers_2x.png" />
+    <Content Include="Content\Kendo\BlueOpal\slider-h.gif" />
+    <Content Include="Content\Kendo\BlueOpal\slider-v.gif" />
+    <Content Include="Content\Kendo\BlueOpal\sprite.png" />
+    <Content Include="Content\Kendo\BlueOpal\sprite_2x.png" />
+    <Content Include="Content\Kendo\BlueOpal\sprite_kpi.png" />
+    <Content Include="Content\Kendo\BlueOpal\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Bootstrap\editor.png" />
+    <Content Include="Content\Kendo\Bootstrap\imagebrowser.png" />
+    <Content Include="Content\Kendo\Bootstrap\indeterminate.gif" />
+    <Content Include="Content\Kendo\Bootstrap\loading-image.gif" />
+    <Content Include="Content\Kendo\Bootstrap\loading.gif" />
+    <Content Include="Content\Kendo\Bootstrap\loading_2x.gif" />
+    <Content Include="Content\Kendo\Bootstrap\markers.png" />
+    <Content Include="Content\Kendo\Bootstrap\markers_2x.png" />
+    <Content Include="Content\Kendo\Bootstrap\slider-h.gif" />
+    <Content Include="Content\Kendo\Bootstrap\slider-v.gif" />
+    <Content Include="Content\Kendo\Bootstrap\sprite.png" />
+    <Content Include="Content\Kendo\Bootstrap\sprite_2x.png" />
+    <Content Include="Content\Kendo\Bootstrap\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\calendar\cake.png" />
+    <Content Include="Content\Kendo\calendar\calendar-template.jpg" />
+    <Content Include="Content\Kendo\calendar\calendar.png" />
+    <Content Include="Content\Kendo\calendar\cocktail.png" />
+    <Content Include="Content\Kendo\calendar\exhibition.png" />
+    <Content Include="Content\Kendo\calendar\party.png" />
+    <Content Include="Content\Kendo\calendar\reports.png" />
+    <Content Include="Content\Kendo\calendar\specialDays.png" />
+    <Content Include="Content\Kendo\colorpicker\background.png" />
+    <Content Include="Content\Kendo\colorpicker\interior-bg.png" />
+    <Content Include="Content\Kendo\colorpicker\motor.png" />
+    <Content Include="Content\Kendo\colorpicker\sofa-3a4c8b.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-746153.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-ac120f.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-d2d2d2.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-ddd1c3.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-fb455f.jpg" />
+    <Content Include="Content\Kendo\colorpicker\sofa-ffcc33.jpg" />
+    <Content Include="Content\Kendo\combobox\tShirt.png" />
+    <Content Include="Content\Kendo\contacts.gif" />
+    <Content Include="Content\Kendo\contactsItems.gif" />
+    <Content Include="Content\Kendo\Customers\ALFKI.jpg" />
+    <Content Include="Content\Kendo\Customers\ANATR.jpg" />
+    <Content Include="Content\Kendo\Customers\ANTON.jpg" />
+    <Content Include="Content\Kendo\Customers\AROUT.jpg" />
+    <Content Include="Content\Kendo\Customers\BERGS.jpg" />
+    <Content Include="Content\Kendo\Customers\BLAUS.jpg" />
+    <Content Include="Content\Kendo\Customers\BLONP.jpg" />
+    <Content Include="Content\Kendo\Customers\BOLID.jpg" />
+    <Content Include="Content\Kendo\Customers\BONAP.jpg" />
+    <Content Include="Content\Kendo\Customers\BOTTM.jpg" />
+    <Content Include="Content\Kendo\Customers\BSBEV.jpg" />
+    <Content Include="Content\Kendo\Customers\CACTU.jpg" />
+    <Content Include="Content\Kendo\Customers\CENTC.jpg" />
+    <Content Include="Content\Kendo\Customers\CHOPS.jpg" />
+    <Content Include="Content\Kendo\Customers\COMMI.jpg" />
+    <Content Include="Content\Kendo\Customers\CONSH.jpg" />
+    <Content Include="Content\Kendo\Customers\DRACD.jpg" />
+    <Content Include="Content\Kendo\Customers\DUMON.jpg" />
+    <Content Include="Content\Kendo\Customers\EASTC.jpg" />
+    <Content Include="Content\Kendo\Customers\ERNSH.jpg" />
+    <Content Include="Content\Kendo\Customers\FAMIA.jpg" />
+    <Content Include="Content\Kendo\Customers\FISSA.jpg" />
+    <Content Include="Content\Kendo\Customers\FOLIG.jpg" />
+    <Content Include="Content\Kendo\Customers\FOLKO.jpg" />
+    <Content Include="Content\Kendo\Customers\FRANK.jpg" />
+    <Content Include="Content\Kendo\Customers\FRANR.jpg" />
+    <Content Include="Content\Kendo\Customers\FRANS.jpg" />
+    <Content Include="Content\Kendo\Customers\FURIB.jpg" />
+    <Content Include="Content\Kendo\Customers\GALED.jpg" />
+    <Content Include="Content\Kendo\Customers\GODOS.jpg" />
+    <Content Include="Content\Kendo\Customers\GOURL.jpg" />
+    <Content Include="Content\Kendo\Customers\GREAL.jpg" />
+    <Content Include="Content\Kendo\Customers\GROSR.jpg" />
+    <Content Include="Content\Kendo\Customers\HANAR.jpg" />
+    <Content Include="Content\Kendo\Customers\HILAA.jpg" />
+    <Content Include="Content\Kendo\Customers\HUNGC.jpg" />
+    <Content Include="Content\Kendo\Customers\HUNGO.jpg" />
+    <Content Include="Content\Kendo\Customers\ISLAT.jpg" />
+    <Content Include="Content\Kendo\Customers\KOENE.jpg" />
+    <Content Include="Content\Kendo\Customers\LACOR.jpg" />
+    <Content Include="Content\Kendo\Customers\LAMAI.jpg" />
+    <Content Include="Content\Kendo\Customers\LAUGB.jpg" />
+    <Content Include="Content\Kendo\Customers\LAZYK.jpg" />
+    <Content Include="Content\Kendo\Customers\LEHMS.jpg" />
+    <Content Include="Content\Kendo\Customers\LETSS.jpg" />
+    <Content Include="Content\Kendo\Customers\LILAS.jpg" />
+    <Content Include="Content\Kendo\Customers\LINOD.jpg" />
+    <Content Include="Content\Kendo\Customers\LONEP.jpg" />
+    <Content Include="Content\Kendo\Customers\MAGAA.jpg" />
+    <Content Include="Content\Kendo\Customers\MAISD.jpg" />
+    <Content Include="Content\Kendo\Customers\MEREP.jpg" />
+    <Content Include="Content\Kendo\Customers\MORGK.jpg" />
+    <Content Include="Content\Kendo\Customers\NORTS.jpg" />
+    <Content Include="Content\Kendo\Customers\OCEAN.jpg" />
+    <Content Include="Content\Kendo\Customers\OLDWO.jpg" />
+    <Content Include="Content\Kendo\Customers\OTTIK.jpg" />
+    <Content Include="Content\Kendo\Customers\PARIS.jpg" />
+    <Content Include="Content\Kendo\Customers\PERIC.jpg" />
+    <Content Include="Content\Kendo\Customers\PICCO.jpg" />
+    <Content Include="Content\Kendo\Customers\PRINI.jpg" />
+    <Content Include="Content\Kendo\Customers\QUEDE.jpg" />
+    <Content Include="Content\Kendo\Customers\QUEEN.jpg" />
+    <Content Include="Content\Kendo\Customers\QUICK.jpg" />
+    <Content Include="Content\Kendo\Customers\RANCH.jpg" />
+    <Content Include="Content\Kendo\Customers\RATTC.jpg" />
+    <Content Include="Content\Kendo\Customers\REGGC.jpg" />
+    <Content Include="Content\Kendo\Customers\RICAR.jpg" />
+    <Content Include="Content\Kendo\Customers\RICSU.jpg" />
+    <Content Include="Content\Kendo\Customers\ROMEY.jpg" />
+    <Content Include="Content\Kendo\Customers\SANTG.jpg" />
+    <Content Include="Content\Kendo\Customers\SAVEA.jpg" />
+    <Content Include="Content\Kendo\Customers\SEVES.jpg" />
+    <Content Include="Content\Kendo\Customers\SIMOB.jpg" />
+    <Content Include="Content\Kendo\Customers\SPECD.jpg" />
+    <Content Include="Content\Kendo\Customers\SPLIR.jpg" />
+    <Content Include="Content\Kendo\Customers\SUPRD.jpg" />
+    <Content Include="Content\Kendo\Customers\THEBI.jpg" />
+    <Content Include="Content\Kendo\Customers\THECR.jpg" />
+    <Content Include="Content\Kendo\Customers\TOMSP.jpg" />
+    <Content Include="Content\Kendo\Customers\TORTU.jpg" />
+    <Content Include="Content\Kendo\Customers\TRADH.jpg" />
+    <Content Include="Content\Kendo\Customers\TRAIH.jpg" />
+    <Content Include="Content\Kendo\Customers\VAFFE.jpg" />
+    <Content Include="Content\Kendo\Customers\VICTE.jpg" />
+    <Content Include="Content\Kendo\Customers\VINET.jpg" />
+    <Content Include="Content\Kendo\Customers\WANDK.jpg" />
+    <Content Include="Content\Kendo\Customers\WARTH.jpg" />
+    <Content Include="Content\Kendo\Customers\WELLI.jpg" />
+    <Content Include="Content\Kendo\Customers\WHITC.jpg" />
+    <Content Include="Content\Kendo\Customers\WILMK.jpg" />
+    <Content Include="Content\Kendo\Customers\WOLZA.jpg" />
+    <Content Include="Content\Kendo\datasource\books.xml" />
+    <Content Include="Content\Kendo\datasource\remote-data\twitter-icon.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\bulletproof-web-design.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\eloquent-javascript.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\handcrafted-css.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\high-performance-javascript.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\javascript-patterns.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\javascript-the-good-parts.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\responsive-web-design.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\secrets-of-the-javascript-ninja.png" />
+    <Content Include="Content\Kendo\datasource\xml-data\stunning-css3.png" />
+    <Content Include="Content\Kendo\datepicker\mailSettings.png" />
+    <Content Include="Content\Kendo\datepicker\todo.png" />
+    <Content Include="Content\Kendo\Default\editor.png" />
+    <Content Include="Content\Kendo\Default\imagebrowser.png" />
+    <Content Include="Content\Kendo\Default\indeterminate.gif" />
+    <Content Include="Content\Kendo\Default\loading-image.gif" />
+    <Content Include="Content\Kendo\Default\loading.gif" />
+    <Content Include="Content\Kendo\Default\loading_2x.gif" />
+    <Content Include="Content\Kendo\Default\markers.png" />
+    <Content Include="Content\Kendo\Default\markers_2x.png" />
+    <Content Include="Content\Kendo\Default\slider-h.gif" />
+    <Content Include="Content\Kendo\Default\slider-v.gif" />
+    <Content Include="Content\Kendo\Default\sprite.png" />
+    <Content Include="Content\Kendo\Default\sprite_2x.png" />
+    <Content Include="Content\Kendo\Default\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Default\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\delete.png" />
+    <Content Include="Content\Kendo\dragdrop\drag-clue.png" />
+    <Content Include="Content\Kendo\dragdrop\draggable.png" />
+    <Content Include="Content\Kendo\drawer\menu.png" />
+    <Content Include="Content\Kendo\dropdownlist\cap.png" />
+    <Content Include="Content\Kendo\edit.png" />
+    <Content Include="Content\Kendo\editor\dataviz.png" />
+    <Content Include="Content\Kendo\editor\editorStyles.css" />
+    <Content Include="Content\Kendo\editor\insert-html-icon.png" />
+    <Content Include="Content\Kendo\editor\kendo-ui-web.png" />
+    <Content Include="Content\Kendo\editor\mobile.png" />
+    <Content Include="Content\Kendo\editor\pdf-export-styles.css" />
+    <Content Include="Content\Kendo\editor\web.png" />
+    <Content Include="Content\Kendo\Employees\1.jpg" />
+    <Content Include="Content\Kendo\Employees\2.jpg" />
+    <Content Include="Content\Kendo\Employees\3.jpg" />
+    <Content Include="Content\Kendo\Employees\4.jpg" />
+    <Content Include="Content\Kendo\Employees\5.jpg" />
+    <Content Include="Content\Kendo\Employees\6.jpg" />
+    <Content Include="Content\Kendo\Employees\7.jpg" />
+    <Content Include="Content\Kendo\Employees\8.jpg" />
+    <Content Include="Content\Kendo\Employees\9.jpg" />
+    <Content Include="Content\Kendo\favicon.png" />
+    <Content Include="Content\Kendo\Fiori\editor.png" />
+    <Content Include="Content\Kendo\Fiori\imagebrowser.png" />
+    <Content Include="Content\Kendo\Fiori\indeterminate.gif" />
+    <Content Include="Content\Kendo\Fiori\loading-image.gif" />
+    <Content Include="Content\Kendo\Fiori\loading.gif" />
+    <Content Include="Content\Kendo\Fiori\loading_2x.gif" />
+    <Content Include="Content\Kendo\Fiori\markers.png" />
+    <Content Include="Content\Kendo\Fiori\markers_2x.png" />
+    <Content Include="Content\Kendo\Fiori\slider-h.gif" />
+    <Content Include="Content\Kendo\Fiori\slider-v.gif" />
+    <Content Include="Content\Kendo\Fiori\sprite.png" />
+    <Content Include="Content\Kendo\Fiori\sprite_2x.png" />
+    <Content Include="Content\Kendo\Fiori\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Fiori\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Flat\editor.png" />
+    <Content Include="Content\Kendo\Flat\imagebrowser.png" />
+    <Content Include="Content\Kendo\Flat\indeterminate.gif" />
+    <Content Include="Content\Kendo\Flat\loading-image.gif" />
+    <Content Include="Content\Kendo\Flat\loading.gif" />
+    <Content Include="Content\Kendo\Flat\loading_2x.gif" />
+    <Content Include="Content\Kendo\Flat\markers.png" />
+    <Content Include="Content\Kendo\Flat\markers_2x.png" />
+    <Content Include="Content\Kendo\Flat\slider-h.gif" />
+    <Content Include="Content\Kendo\Flat\slider-v.gif" />
+    <Content Include="Content\Kendo\Flat\sprite.png" />
+    <Content Include="Content\Kendo\Flat\sprite_2x.png" />
+    <Content Include="Content\Kendo\Flat\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Flat\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\folder.png" />
+    <Content Include="Content\Kendo\foldersList.gif" />
+    <Content Include="Content\Kendo\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Content\Kendo\fonts\glyphs\KendoUIGlyphs.svg" />
+    <Content Include="Content\Kendo\foods\1.jpg" />
+    <Content Include="Content\Kendo\foods\10.jpg" />
+    <Content Include="Content\Kendo\foods\11.jpg" />
+    <Content Include="Content\Kendo\foods\12.jpg" />
+    <Content Include="Content\Kendo\foods\13.jpg" />
+    <Content Include="Content\Kendo\foods\14.jpg" />
+    <Content Include="Content\Kendo\foods\15.jpg" />
+    <Content Include="Content\Kendo\foods\16.jpg" />
+    <Content Include="Content\Kendo\foods\17.jpg" />
+    <Content Include="Content\Kendo\foods\18.jpg" />
+    <Content Include="Content\Kendo\foods\19.jpg" />
+    <Content Include="Content\Kendo\foods\2.jpg" />
+    <Content Include="Content\Kendo\foods\20.jpg" />
+    <Content Include="Content\Kendo\foods\200\11.jpg" />
+    <Content Include="Content\Kendo\foods\200\12.jpg" />
+    <Content Include="Content\Kendo\foods\200\31.jpg" />
+    <Content Include="Content\Kendo\foods\200\32.jpg" />
+    <Content Include="Content\Kendo\foods\200\33.jpg" />
+    <Content Include="Content\Kendo\foods\200\59.jpg" />
+    <Content Include="Content\Kendo\foods\200\60.jpg" />
+    <Content Include="Content\Kendo\foods\200\69.jpg" />
+    <Content Include="Content\Kendo\foods\200\72.jpg" />
+    <Content Include="Content\Kendo\foods\21.jpg" />
+    <Content Include="Content\Kendo\foods\22.jpg" />
+    <Content Include="Content\Kendo\foods\23.jpg" />
+    <Content Include="Content\Kendo\foods\24.jpg" />
+    <Content Include="Content\Kendo\foods\25.jpg" />
+    <Content Include="Content\Kendo\foods\26.jpg" />
+    <Content Include="Content\Kendo\foods\27.jpg" />
+    <Content Include="Content\Kendo\foods\28.jpg" />
+    <Content Include="Content\Kendo\foods\29.jpg" />
+    <Content Include="Content\Kendo\foods\3.jpg" />
+    <Content Include="Content\Kendo\foods\30.jpg" />
+    <Content Include="Content\Kendo\foods\31.jpg" />
+    <Content Include="Content\Kendo\foods\32.jpg" />
+    <Content Include="Content\Kendo\foods\33.jpg" />
+    <Content Include="Content\Kendo\foods\34.jpg" />
+    <Content Include="Content\Kendo\foods\35.jpg" />
+    <Content Include="Content\Kendo\foods\36.jpg" />
+    <Content Include="Content\Kendo\foods\37.jpg" />
+    <Content Include="Content\Kendo\foods\38.jpg" />
+    <Content Include="Content\Kendo\foods\39.jpg" />
+    <Content Include="Content\Kendo\foods\4.jpg" />
+    <Content Include="Content\Kendo\foods\40.jpg" />
+    <Content Include="Content\Kendo\foods\41.jpg" />
+    <Content Include="Content\Kendo\foods\42.jpg" />
+    <Content Include="Content\Kendo\foods\43.jpg" />
+    <Content Include="Content\Kendo\foods\44.jpg" />
+    <Content Include="Content\Kendo\foods\45.jpg" />
+    <Content Include="Content\Kendo\foods\46.jpg" />
+    <Content Include="Content\Kendo\foods\47.jpg" />
+    <Content Include="Content\Kendo\foods\48.jpg" />
+    <Content Include="Content\Kendo\foods\49.jpg" />
+    <Content Include="Content\Kendo\foods\5.jpg" />
+    <Content Include="Content\Kendo\foods\50.jpg" />
+    <Content Include="Content\Kendo\foods\51.jpg" />
+    <Content Include="Content\Kendo\foods\52.jpg" />
+    <Content Include="Content\Kendo\foods\53.jpg" />
+    <Content Include="Content\Kendo\foods\54.jpg" />
+    <Content Include="Content\Kendo\foods\55.jpg" />
+    <Content Include="Content\Kendo\foods\56.jpg" />
+    <Content Include="Content\Kendo\foods\57.jpg" />
+    <Content Include="Content\Kendo\foods\58.jpg" />
+    <Content Include="Content\Kendo\foods\59.jpg" />
+    <Content Include="Content\Kendo\foods\6.jpg" />
+    <Content Include="Content\Kendo\foods\60.jpg" />
+    <Content Include="Content\Kendo\foods\61.jpg" />
+    <Content Include="Content\Kendo\foods\62.jpg" />
+    <Content Include="Content\Kendo\foods\63.jpg" />
+    <Content Include="Content\Kendo\foods\64.jpg" />
+    <Content Include="Content\Kendo\foods\65.jpg" />
+    <Content Include="Content\Kendo\foods\66.jpg" />
+    <Content Include="Content\Kendo\foods\67.jpg" />
+    <Content Include="Content\Kendo\foods\68.jpg" />
+    <Content Include="Content\Kendo\foods\69.jpg" />
+    <Content Include="Content\Kendo\foods\7.jpg" />
+    <Content Include="Content\Kendo\foods\70.jpg" />
+    <Content Include="Content\Kendo\foods\71.jpg" />
+    <Content Include="Content\Kendo\foods\72.jpg" />
+    <Content Include="Content\Kendo\foods\73.jpg" />
+    <Content Include="Content\Kendo\foods\74.jpg" />
+    <Content Include="Content\Kendo\foods\75.jpg" />
+    <Content Include="Content\Kendo\foods\76.jpg" />
+    <Content Include="Content\Kendo\foods\77.jpg" />
+    <Content Include="Content\Kendo\foods\78.jpg" />
+    <Content Include="Content\Kendo\foods\79.jpg" />
+    <Content Include="Content\Kendo\foods\8.jpg" />
+    <Content Include="Content\Kendo\foods\80.jpg" />
+    <Content Include="Content\Kendo\foods\9.jpg" />
+    <Content Include="Content\Kendo\framework\company-logo.png" />
+    <Content Include="Content\Kendo\fx\blogs-screenshot.png" />
+    <Content Include="Content\Kendo\fx\cart.png" />
+    <Content Include="Content\Kendo\fx\groceries.jpg" />
+    <Content Include="Content\Kendo\fx\library.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\arrow-left.png" />
+    <Content Include="Content\Kendo\fx\pageturn\arrow-right.png" />
+    <Content Include="Content\Kendo\fx\pageturn\audi.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\book.png" />
+    <Content Include="Content\Kendo\fx\pageturn\ferrari.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\maserati.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\mazda.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\mercedes.jpg" />
+    <Content Include="Content\Kendo\fx\pageturn\mini.jpg" />
+    <Content Include="Content\Kendo\fx\replace\home1.jpg" />
+    <Content Include="Content\Kendo\fx\replace\home2.jpg" />
+    <Content Include="Content\Kendo\fx\replace\home3.jpg" />
+    <Content Include="Content\Kendo\fx\replace\t1.jpg" />
+    <Content Include="Content\Kendo\fx\replace\t2.jpg" />
+    <Content Include="Content\Kendo\fx\replace\t3.jpg" />
+    <Content Include="Content\Kendo\fx\share-handle.png" />
+    <Content Include="Content\Kendo\fx\social-buttons.png" />
+    <Content Include="Content\Kendo\fx\store.jpg" />
+    <Content Include="Content\Kendo\fx\zoom\andreas.png" />
+    <Content Include="Content\Kendo\fx\zoom\background.png" />
+    <Content Include="Content\Kendo\fx\zoom\lysa.png" />
+    <Content Include="Content\Kendo\fx\zoom\mathew.png" />
+    <Content Include="Content\Kendo\gantt\resources\1.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\10.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\11.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\12.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\13.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\2.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\3.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\4.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\5.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\6.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\7.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\8.jpg" />
+    <Content Include="Content\Kendo\gantt\resources\9.jpg" />
+    <Content Include="Content\Kendo\globalization\cultures\kendo.culture.bg-BG.js" />
+    <Content Include="Content\Kendo\globalization\cultures\kendo.culture.de-DE.js" />
+    <Content Include="Content\Kendo\globalization\cultures\kendo.culture.en-GB.js" />
+    <Content Include="Content\Kendo\globalization\cultures\kendo.culture.en-US.js" />
+    <Content Include="Content\Kendo\globalization\cultures\kendo.culture.fr-FR.js" />
+    <Content Include="Content\Kendo\grid\clientsDb.png" />
+    <Content Include="Content\Kendo\HighContrast\editor.png" />
+    <Content Include="Content\Kendo\HighContrast\imagebrowser.png" />
+    <Content Include="Content\Kendo\HighContrast\indeterminate.gif" />
+    <Content Include="Content\Kendo\HighContrast\loading-image.gif" />
+    <Content Include="Content\Kendo\HighContrast\loading.gif" />
+    <Content Include="Content\Kendo\HighContrast\loading_2x.gif" />
+    <Content Include="Content\Kendo\HighContrast\markers.png" />
+    <Content Include="Content\Kendo\HighContrast\markers_2x.png" />
+    <Content Include="Content\Kendo\HighContrast\slider-h.gif" />
+    <Content Include="Content\Kendo\HighContrast\slider-v.gif" />
+    <Content Include="Content\Kendo\HighContrast\sprite.png" />
+    <Content Include="Content\Kendo\HighContrast\sprite_2x.png" />
+    <Content Include="Content\Kendo\HighContrast\sprite_kpi.png" />
+    <Content Include="Content\Kendo\HighContrast\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\integration\angular2-app.js" />
+    <Content Include="Content\Kendo\integration\angular2-app.ts" />
+    <Content Include="Content\Kendo\integration\boardingPass.png" />
+    <Content Include="Content\Kendo\integration\jquery.signalr-1.1.3.min.js" />
+    <Content Include="Content\Kendo\kendo.black.min.css" />
+    <Content Include="Content\Kendo\kendo.black.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.blueopal.min.css" />
+    <Content Include="Content\Kendo\kendo.blueopal.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.bootstrap.min.css" />
+    <Content Include="Content\Kendo\kendo.bootstrap.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.common-bootstrap.core.min.css" />
+    <Content Include="Content\Kendo\kendo.common-bootstrap.min.css" />
+    <Content Include="Content\Kendo\kendo.common-fiori.core.min.css" />
+    <Content Include="Content\Kendo\kendo.common-fiori.min.css" />
+    <Content Include="Content\Kendo\kendo.common-material.core.min.css" />
+    <Content Include="Content\Kendo\kendo.common-material.min.css" />
+    <Content Include="Content\Kendo\kendo.common-nova.core.min.css" />
+    <Content Include="Content\Kendo\kendo.common-nova.min.css" />
+    <Content Include="Content\Kendo\kendo.common-office365.min.css" />
+    <Content Include="Content\Kendo\kendo.common.core.min.css" />
+    <Content Include="Content\Kendo\kendo.common.min.css" />
+    <Content Include="Content\Kendo\kendo.default.min.css" />
+    <Content Include="Content\Kendo\kendo.default.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.fiori.min.css" />
+    <Content Include="Content\Kendo\kendo.fiori.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.flat.min.css" />
+    <Content Include="Content\Kendo\kendo.flat.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.highcontrast.min.css" />
+    <Content Include="Content\Kendo\kendo.highcontrast.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.material.min.css" />
+    <Content Include="Content\Kendo\kendo.material.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.materialblack.min.css" />
+    <Content Include="Content\Kendo\kendo.materialblack.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.metro.min.css" />
+    <Content Include="Content\Kendo\kendo.metro.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.metroblack.min.css" />
+    <Content Include="Content\Kendo\kendo.metroblack.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.moonlight.min.css" />
+    <Content Include="Content\Kendo\kendo.moonlight.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.nova.min.css" />
+    <Content Include="Content\Kendo\kendo.nova.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.office365.min.css" />
+    <Content Include="Content\Kendo\kendo.office365.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.rtl.css" />
+    <Content Include="Content\Kendo\kendo.rtl.min.css" />
+    <Content Include="Content\Kendo\kendo.silver.min.css" />
+    <Content Include="Content\Kendo\kendo.silver.mobile.min.css" />
+    <Content Include="Content\Kendo\kendo.uniform.min.css" />
+    <Content Include="Content\Kendo\kendo.uniform.mobile.min.css" />
+    <Content Include="Content\Kendo\listview\simple-to-do.png" />
+    <Content Include="Content\Kendo\loremIpsum.html" />
+    <Content Include="Content\Kendo\mail.gif" />
+    <Content Include="Content\Kendo\mailDeletedItems.gif" />
+    <Content Include="Content\Kendo\mailfolder.gif" />
+    <Content Include="Content\Kendo\mailInbox.gif" />
+    <Content Include="Content\Kendo\mailItems.gif" />
+    <Content Include="Content\Kendo\mailOutbox.gif" />
+    <Content Include="Content\Kendo\mailPersonalFolders.gif" />
+    <Content Include="Content\Kendo\mailSearch.gif" />
+    <Content Include="Content\Kendo\mailSent.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\editor.png" />
+    <Content Include="Content\Kendo\MaterialBlack\imagebrowser.png" />
+    <Content Include="Content\Kendo\MaterialBlack\indeterminate.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\loading-image.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\loading.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\loading_2x.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\markers.png" />
+    <Content Include="Content\Kendo\MaterialBlack\markers_2x.png" />
+    <Content Include="Content\Kendo\MaterialBlack\slider-h.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\slider-v.gif" />
+    <Content Include="Content\Kendo\MaterialBlack\sprite.png" />
+    <Content Include="Content\Kendo\MaterialBlack\sprite_2x.png" />
+    <Content Include="Content\Kendo\MaterialBlack\sprite_kpi.png" />
+    <Content Include="Content\Kendo\MaterialBlack\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Material\editor.png" />
+    <Content Include="Content\Kendo\Material\imagebrowser.png" />
+    <Content Include="Content\Kendo\Material\indeterminate.gif" />
+    <Content Include="Content\Kendo\Material\loading-image.gif" />
+    <Content Include="Content\Kendo\Material\loading.gif" />
+    <Content Include="Content\Kendo\Material\loading_2x.gif" />
+    <Content Include="Content\Kendo\Material\markers.png" />
+    <Content Include="Content\Kendo\Material\markers_2x.png" />
+    <Content Include="Content\Kendo\Material\slider-h.gif" />
+    <Content Include="Content\Kendo\Material\slider-v.gif" />
+    <Content Include="Content\Kendo\Material\sprite.png" />
+    <Content Include="Content\Kendo\Material\sprite_2x.png" />
+    <Content Include="Content\Kendo\Material\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Material\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\menu\header.jpg" />
+    <Content Include="Content\Kendo\menu\map.png" />
+    <Content Include="Content\Kendo\MetroBlack\editor.png" />
+    <Content Include="Content\Kendo\MetroBlack\imagebrowser.png" />
+    <Content Include="Content\Kendo\MetroBlack\indeterminate.gif" />
+    <Content Include="Content\Kendo\MetroBlack\loading-image.gif" />
+    <Content Include="Content\Kendo\MetroBlack\loading.gif" />
+    <Content Include="Content\Kendo\MetroBlack\loading_2x.gif" />
+    <Content Include="Content\Kendo\MetroBlack\markers.png" />
+    <Content Include="Content\Kendo\MetroBlack\markers_2x.png" />
+    <Content Include="Content\Kendo\MetroBlack\slider-h.gif" />
+    <Content Include="Content\Kendo\MetroBlack\slider-v.gif" />
+    <Content Include="Content\Kendo\MetroBlack\sprite.png" />
+    <Content Include="Content\Kendo\MetroBlack\sprite_2x.png" />
+    <Content Include="Content\Kendo\MetroBlack\sprite_kpi.png" />
+    <Content Include="Content\Kendo\MetroBlack\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Metro\editor.png" />
+    <Content Include="Content\Kendo\Metro\imagebrowser.png" />
+    <Content Include="Content\Kendo\Metro\indeterminate.gif" />
+    <Content Include="Content\Kendo\Metro\loading-image.gif" />
+    <Content Include="Content\Kendo\Metro\loading.gif" />
+    <Content Include="Content\Kendo\Metro\loading_2x.gif" />
+    <Content Include="Content\Kendo\Metro\markers.png" />
+    <Content Include="Content\Kendo\Metro\markers_2x.png" />
+    <Content Include="Content\Kendo\Metro\slider-h.gif" />
+    <Content Include="Content\Kendo\Metro\slider-v.gif" />
+    <Content Include="Content\Kendo\Metro\sprite.png" />
+    <Content Include="Content\Kendo\Metro\sprite_2x.png" />
+    <Content Include="Content\Kendo\Metro\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Metro\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Moonlight\editor.png" />
+    <Content Include="Content\Kendo\Moonlight\imagebrowser.png" />
+    <Content Include="Content\Kendo\Moonlight\indeterminate.gif" />
+    <Content Include="Content\Kendo\Moonlight\loading-image.gif" />
+    <Content Include="Content\Kendo\Moonlight\loading.gif" />
+    <Content Include="Content\Kendo\Moonlight\loading_2x.gif" />
+    <Content Include="Content\Kendo\Moonlight\markers.png" />
+    <Content Include="Content\Kendo\Moonlight\markers_2x.png" />
+    <Content Include="Content\Kendo\Moonlight\slider-h.gif" />
+    <Content Include="Content\Kendo\Moonlight\slider-v.gif" />
+    <Content Include="Content\Kendo\Moonlight\sprite.png" />
+    <Content Include="Content\Kendo\Moonlight\sprite_2x.png" />
+    <Content Include="Content\Kendo\Moonlight\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Moonlight\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\Mvc\Grid.png" />
+    <Content Include="Content\Kendo\Mvc\Menu.png" />
+    <Content Include="Content\Kendo\Mvc\PanelBar.png" />
+    <Content Include="Content\Kendo\Mvc\TabStrip.png" />
+    <Content Include="Content\Kendo\mvvm\confirm.png" />
+    <Content Include="Content\Kendo\mvvm\regForm.png" />
+    <Content Include="Content\Kendo\notes.gif" />
+    <Content Include="Content\Kendo\notesItems.gif" />
+    <Content Include="Content\Kendo\notification\envelope.png" />
+    <Content Include="Content\Kendo\notification\error-icon.png" />
+    <Content Include="Content\Kendo\notification\success-icon.png" />
+    <Content Include="Content\Kendo\Nova\editor.png" />
+    <Content Include="Content\Kendo\Nova\imagebrowser.png" />
+    <Content Include="Content\Kendo\Nova\indeterminate.gif" />
+    <Content Include="Content\Kendo\Nova\loading-image.gif" />
+    <Content Include="Content\Kendo\Nova\loading.gif" />
+    <Content Include="Content\Kendo\Nova\loading_2x.gif" />
+    <Content Include="Content\Kendo\Nova\markers.png" />
+    <Content Include="Content\Kendo\Nova\markers_2x.png" />
+    <Content Include="Content\Kendo\Nova\slider-h.gif" />
+    <Content Include="Content\Kendo\Nova\slider-v.gif" />
+    <Content Include="Content\Kendo\Nova\sprite.png" />
+    <Content Include="Content\Kendo\Nova\sprite_2x.png" />
+    <Content Include="Content\Kendo\Nova\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Nova\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\numerictextbox\addProduct.png" />
+    <Content Include="Content\Kendo\Office365\editor.png" />
+    <Content Include="Content\Kendo\Office365\imagebrowser.png" />
+    <Content Include="Content\Kendo\Office365\indeterminate.gif" />
+    <Content Include="Content\Kendo\Office365\loading-image.gif" />
+    <Content Include="Content\Kendo\Office365\loading.gif" />
+    <Content Include="Content\Kendo\Office365\loading_2x.gif" />
+    <Content Include="Content\Kendo\Office365\markers.png" />
+    <Content Include="Content\Kendo\Office365\markers_2x.png" />
+    <Content Include="Content\Kendo\Office365\slider-h.gif" />
+    <Content Include="Content\Kendo\Office365\slider-v.gif" />
+    <Content Include="Content\Kendo\Office365\sprite.png" />
+    <Content Include="Content\Kendo\Office365\sprite_2x.png" />
+    <Content Include="Content\Kendo\Office365\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Office365\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\orm-comparison.png" />
+    <Content Include="Content\Kendo\overview\autocomplete.png" />
+    <Content Include="Content\Kendo\overview\combobox.png" />
+    <Content Include="Content\Kendo\overview\datasource.png" />
+    <Content Include="Content\Kendo\overview\datepicker.png" />
+    <Content Include="Content\Kendo\overview\editor.png" />
+    <Content Include="Content\Kendo\overview\grid.png" />
+    <Content Include="Content\Kendo\overview\listview.png" />
+    <Content Include="Content\Kendo\overview\mvvm.png" />
+    <Content Include="Content\Kendo\overview\scheduler.png" />
+    <Content Include="Content\Kendo\page_white_text.png" />
+    <Content Include="Content\Kendo\panelbar\ajax\ajaxContent1.html" />
+    <Content Include="Content\Kendo\panelbar\ajax\ajaxContent2.html" />
+    <Content Include="Content\Kendo\panelbar\ajax\ajaxContent3.html" />
+    <Content Include="Content\Kendo\panelbar\ajax\ajaxContent4.html" />
+    <Content Include="Content\Kendo\panelbar\andrew.jpg" />
+    <Content Include="Content\Kendo\panelbar\astonmartin.png" />
+    <Content Include="Content\Kendo\panelbar\history.png" />
+    <Content Include="Content\Kendo\panelbar\nancy.jpg" />
+    <Content Include="Content\Kendo\panelbar\orgFoot.png" />
+    <Content Include="Content\Kendo\panelbar\orgHead.png" />
+    <Content Include="Content\Kendo\panelbar\robert.jpg" />
+    <Content Include="Content\Kendo\popover\tag-people.jpg" />
+    <Content Include="Content\Kendo\psy-album.jpg" />
+    <Content Include="Content\Kendo\scheduler\fast-and-furious.jpg" />
+    <Content Include="Content\Kendo\scheduler\now-you-see-me.jpg" />
+    <Content Include="Content\Kendo\scheduler\scheduler-people.png" />
+    <Content Include="Content\Kendo\scheduler\team-schedule.png" />
+    <Content Include="Content\Kendo\scheduler\the-help.jpg" />
+    <Content Include="Content\Kendo\scheduler\the-internship.jpg" />
+    <Content Include="Content\Kendo\scheduler\wallflower.jpg" />
+    <Content Include="Content\Kendo\scroller\title.png" />
+    <Content Include="Content\Kendo\scrollview\arrow-left-black.png" />
+    <Content Include="Content\Kendo\scrollview\arrow-left.png" />
+    <Content Include="Content\Kendo\scrollview\arrow-right-black.png" />
+    <Content Include="Content\Kendo\scrollview\arrow-right.png" />
+    <Content Include="Content\Kendo\Silver\editor.png" />
+    <Content Include="Content\Kendo\Silver\imagebrowser.png" />
+    <Content Include="Content\Kendo\Silver\indeterminate.gif" />
+    <Content Include="Content\Kendo\Silver\loading-image.gif" />
+    <Content Include="Content\Kendo\Silver\loading.gif" />
+    <Content Include="Content\Kendo\Silver\loading_2x.gif" />
+    <Content Include="Content\Kendo\Silver\markers.png" />
+    <Content Include="Content\Kendo\Silver\markers_2x.png" />
+    <Content Include="Content\Kendo\Silver\slider-h.gif" />
+    <Content Include="Content\Kendo\Silver\slider-v.gif" />
+    <Content Include="Content\Kendo\Silver\sprite.png" />
+    <Content Include="Content\Kendo\Silver\sprite_2x.png" />
+    <Content Include="Content\Kendo\Silver\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Silver\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\slider\climateController.png" />
+    <Content Include="Content\Kendo\slider\eqBack.png" />
+    <Content Include="Content\Kendo\Sl\Chart.gif" />
+    <Content Include="Content\Kendo\Sl\Docking.gif" />
+    <Content Include="Content\Kendo\Sl\GridView.gif" />
+    <Content Include="Content\Kendo\Sl\Scheduler.gif" />
+    <Content Include="Content\Kendo\sortable\1.jpg" />
+    <Content Include="Content\Kendo\sortable\2.jpg" />
+    <Content Include="Content\Kendo\sortable\3.jpg" />
+    <Content Include="Content\Kendo\sortable\4.jpg" />
+    <Content Include="Content\Kendo\sortable\5.jpg" />
+    <Content Include="Content\Kendo\sortable\dashboard-head.png" />
+    <Content Include="Content\Kendo\sortable\demo-app.jpg" />
+    <Content Include="Content\Kendo\sortable\flat.jpg" />
+    <Content Include="Content\Kendo\sortable\grab.cur" />
+    <Content Include="Content\Kendo\sortable\grabbing.cur" />
+    <Content Include="Content\Kendo\sortable\handle.png" />
+    <Content Include="Content\Kendo\sortable\handlers-title.png" />
+    <Content Include="Content\Kendo\sortable\installer.jpg" />
+    <Content Include="Content\Kendo\sortable\one-way.png" />
+    <Content Include="Content\Kendo\sortable\playlist.png" />
+    <Content Include="Content\Kendo\sortable\property-table.jpg" />
+    <Content Include="Content\Kendo\sortable\sales-dashboard.jpg" />
+    <Content Include="Content\Kendo\sortable\shop-it-later.jpg" />
+    <Content Include="Content\Kendo\sortable\slider.jpg" />
+    <Content Include="Content\Kendo\sortable\two-way.png" />
+    <Content Include="Content\Kendo\sortable\weather-dashboard.jpg" />
+    <Content Include="Content\Kendo\splitter\ajax\ajaxContent1.html" />
+    <Content Include="Content\Kendo\splitter\ajax\ajaxContent2.html" />
+    <Content Include="Content\Kendo\Suites\ajax.png" />
+    <Content Include="Content\Kendo\Suites\mvc.png" />
+    <Content Include="Content\Kendo\Suites\orm.png" />
+    <Content Include="Content\Kendo\Suites\rep.png" />
+    <Content Include="Content\Kendo\Suites\sitefinity.png" />
+    <Content Include="Content\Kendo\Suites\sl.png" />
+    <Content Include="Content\Kendo\Suites\test.png" />
+    <Content Include="Content\Kendo\Suites\win.png" />
+    <Content Include="Content\Kendo\Suites\wpf.png" />
+    <Content Include="Content\Kendo\switch\settings-title.png" />
+    <Content Include="Content\Kendo\tabstrip\ajax\ajaxContent1.html" />
+    <Content Include="Content\Kendo\tabstrip\ajax\ajaxContent2.html" />
+    <Content Include="Content\Kendo\tabstrip\ajax\ajaxContent3.html" />
+    <Content Include="Content\Kendo\tabstrip\bmw.png" />
+    <Content Include="Content\Kendo\tabstrip\forecast.png" />
+    <Content Include="Content\Kendo\tabstrip\weather.png" />
+    <Content Include="Content\Kendo\tasks.gif" />
+    <Content Include="Content\Kendo\tasksItems.gif" />
+    <Content Include="Content\Kendo\textures\brushed-metal.png" />
+    <Content Include="Content\Kendo\textures\dots1.png" />
+    <Content Include="Content\Kendo\textures\dots10.png" />
+    <Content Include="Content\Kendo\textures\dots11.png" />
+    <Content Include="Content\Kendo\textures\dots12.png" />
+    <Content Include="Content\Kendo\textures\dots13.png" />
+    <Content Include="Content\Kendo\textures\dots2.png" />
+    <Content Include="Content\Kendo\textures\dots3.png" />
+    <Content Include="Content\Kendo\textures\dots4.png" />
+    <Content Include="Content\Kendo\textures\dots5.png" />
+    <Content Include="Content\Kendo\textures\dots6.png" />
+    <Content Include="Content\Kendo\textures\dots7.png" />
+    <Content Include="Content\Kendo\textures\dots8.png" />
+    <Content Include="Content\Kendo\textures\dots9.png" />
+    <Content Include="Content\Kendo\textures\glass-lighter.png" />
+    <Content Include="Content\Kendo\textures\glass.png" />
+    <Content Include="Content\Kendo\textures\highlight.png" />
+    <Content Include="Content\Kendo\textures\hsv-gradient.png" />
+    <Content Include="Content\Kendo\textures\hue.png" />
+    <Content Include="Content\Kendo\textures\leather1.png" />
+    <Content Include="Content\Kendo\textures\leather2.png" />
+    <Content Include="Content\Kendo\textures\noise.png" />
+    <Content Include="Content\Kendo\textures\stripe1.png" />
+    <Content Include="Content\Kendo\textures\stripe2.png" />
+    <Content Include="Content\Kendo\textures\stripe3.png" />
+    <Content Include="Content\Kendo\textures\stripe4.png" />
+    <Content Include="Content\Kendo\textures\stripe5.png" />
+    <Content Include="Content\Kendo\textures\stripe6.png" />
+    <Content Include="Content\Kendo\textures\transparency.png" />
+    <Content Include="Content\Kendo\textures\transtexture.png" />
+    <Content Include="Content\Kendo\timepicker\alarmSettings.png" />
+    <Content Include="Content\Kendo\toolbar\done.png" />
+    <Content Include="Content\Kendo\toolbar\forward.png" />
+    <Content Include="Content\Kendo\toolbar\important.png" />
+    <Content Include="Content\Kendo\toolbar\mail.png" />
+    <Content Include="Content\Kendo\toolbar\reply-all.png" />
+    <Content Include="Content\Kendo\toolbar\reply.png" />
+    <Content Include="Content\Kendo\toolbar\save.png" />
+    <Content Include="Content\Kendo\toolbar\todo.png" />
+    <Content Include="Content\Kendo\toolbar\upload.png" />
+    <Content Include="Content\Kendo\toolbar\user.png" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent1.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent2.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent3.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent4.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent5.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent6.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent7.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent8.html" />
+    <Content Include="Content\Kendo\tooltip\ajax\ajaxContent9.html" />
+    <Content Include="Content\Kendo\tooltip\cheese.jpg" />
+    <Content Include="Content\Kendo\tooltip\world-map.jpg" />
+    <Content Include="Content\Kendo\treelist\people\1.jpg" />
+    <Content Include="Content\Kendo\treelist\people\10.jpg" />
+    <Content Include="Content\Kendo\treelist\people\100.jpg" />
+    <Content Include="Content\Kendo\treelist\people\11.jpg" />
+    <Content Include="Content\Kendo\treelist\people\12.jpg" />
+    <Content Include="Content\Kendo\treelist\people\13.jpg" />
+    <Content Include="Content\Kendo\treelist\people\14.jpg" />
+    <Content Include="Content\Kendo\treelist\people\15.jpg" />
+    <Content Include="Content\Kendo\treelist\people\16.jpg" />
+    <Content Include="Content\Kendo\treelist\people\17.jpg" />
+    <Content Include="Content\Kendo\treelist\people\18.jpg" />
+    <Content Include="Content\Kendo\treelist\people\19.jpg" />
+    <Content Include="Content\Kendo\treelist\people\2.jpg" />
+    <Content Include="Content\Kendo\treelist\people\20.jpg" />
+    <Content Include="Content\Kendo\treelist\people\21.jpg" />
+    <Content Include="Content\Kendo\treelist\people\22.jpg" />
+    <Content Include="Content\Kendo\treelist\people\23.jpg" />
+    <Content Include="Content\Kendo\treelist\people\24.jpg" />
+    <Content Include="Content\Kendo\treelist\people\26.jpg" />
+    <Content Include="Content\Kendo\treelist\people\27.jpg" />
+    <Content Include="Content\Kendo\treelist\people\28.jpg" />
+    <Content Include="Content\Kendo\treelist\people\29.jpg" />
+    <Content Include="Content\Kendo\treelist\people\3.jpg" />
+    <Content Include="Content\Kendo\treelist\people\30.jpg" />
+    <Content Include="Content\Kendo\treelist\people\31.jpg" />
+    <Content Include="Content\Kendo\treelist\people\32.jpg" />
+    <Content Include="Content\Kendo\treelist\people\33.jpg" />
+    <Content Include="Content\Kendo\treelist\people\34.jpg" />
+    <Content Include="Content\Kendo\treelist\people\35.jpg" />
+    <Content Include="Content\Kendo\treelist\people\36.jpg" />
+    <Content Include="Content\Kendo\treelist\people\37.jpg" />
+    <Content Include="Content\Kendo\treelist\people\38.jpg" />
+    <Content Include="Content\Kendo\treelist\people\39.jpg" />
+    <Content Include="Content\Kendo\treelist\people\4.jpg" />
+    <Content Include="Content\Kendo\treelist\people\40.jpg" />
+    <Content Include="Content\Kendo\treelist\people\41.jpg" />
+    <Content Include="Content\Kendo\treelist\people\42.jpg" />
+    <Content Include="Content\Kendo\treelist\people\43.jpg" />
+    <Content Include="Content\Kendo\treelist\people\44.jpg" />
+    <Content Include="Content\Kendo\treelist\people\45.jpg" />
+    <Content Include="Content\Kendo\treelist\people\46.jpg" />
+    <Content Include="Content\Kendo\treelist\people\47.jpg" />
+    <Content Include="Content\Kendo\treelist\people\48.jpg" />
+    <Content Include="Content\Kendo\treelist\people\49.jpg" />
+    <Content Include="Content\Kendo\treelist\people\5.jpg" />
+    <Content Include="Content\Kendo\treelist\people\50.jpg" />
+    <Content Include="Content\Kendo\treelist\people\51.jpg" />
+    <Content Include="Content\Kendo\treelist\people\52.jpg" />
+    <Content Include="Content\Kendo\treelist\people\53.jpg" />
+    <Content Include="Content\Kendo\treelist\people\54.jpg" />
+    <Content Include="Content\Kendo\treelist\people\55.jpg" />
+    <Content Include="Content\Kendo\treelist\people\56.jpg" />
+    <Content Include="Content\Kendo\treelist\people\57.jpg" />
+    <Content Include="Content\Kendo\treelist\people\58.jpg" />
+    <Content Include="Content\Kendo\treelist\people\59.jpg" />
+    <Content Include="Content\Kendo\treelist\people\6.jpg" />
+    <Content Include="Content\Kendo\treelist\people\60.jpg" />
+    <Content Include="Content\Kendo\treelist\people\61.jpg" />
+    <Content Include="Content\Kendo\treelist\people\62.jpg" />
+    <Content Include="Content\Kendo\treelist\people\63.jpg" />
+    <Content Include="Content\Kendo\treelist\people\64.jpg" />
+    <Content Include="Content\Kendo\treelist\people\65.jpg" />
+    <Content Include="Content\Kendo\treelist\people\66.jpg" />
+    <Content Include="Content\Kendo\treelist\people\67.jpg" />
+    <Content Include="Content\Kendo\treelist\people\68.jpg" />
+    <Content Include="Content\Kendo\treelist\people\69.jpg" />
+    <Content Include="Content\Kendo\treelist\people\7.jpg" />
+    <Content Include="Content\Kendo\treelist\people\70.jpg" />
+    <Content Include="Content\Kendo\treelist\people\71.jpg" />
+    <Content Include="Content\Kendo\treelist\people\72.jpg" />
+    <Content Include="Content\Kendo\treelist\people\73.jpg" />
+    <Content Include="Content\Kendo\treelist\people\74.jpg" />
+    <Content Include="Content\Kendo\treelist\people\75.jpg" />
+    <Content Include="Content\Kendo\treelist\people\76.jpg" />
+    <Content Include="Content\Kendo\treelist\people\77.jpg" />
+    <Content Include="Content\Kendo\treelist\people\78.jpg" />
+    <Content Include="Content\Kendo\treelist\people\79.jpg" />
+    <Content Include="Content\Kendo\treelist\people\8.jpg" />
+    <Content Include="Content\Kendo\treelist\people\80.jpg" />
+    <Content Include="Content\Kendo\treelist\people\81.jpg" />
+    <Content Include="Content\Kendo\treelist\people\82.jpg" />
+    <Content Include="Content\Kendo\treelist\people\83.jpg" />
+    <Content Include="Content\Kendo\treelist\people\84.jpg" />
+    <Content Include="Content\Kendo\treelist\people\85.jpg" />
+    <Content Include="Content\Kendo\treelist\people\86.jpg" />
+    <Content Include="Content\Kendo\treelist\people\87.jpg" />
+    <Content Include="Content\Kendo\treelist\people\88.jpg" />
+    <Content Include="Content\Kendo\treelist\people\89.jpg" />
+    <Content Include="Content\Kendo\treelist\people\9.jpg" />
+    <Content Include="Content\Kendo\treelist\people\90.jpg" />
+    <Content Include="Content\Kendo\treelist\people\91.jpg" />
+    <Content Include="Content\Kendo\treelist\people\92.jpg" />
+    <Content Include="Content\Kendo\treelist\people\93.jpg" />
+    <Content Include="Content\Kendo\treelist\people\94.jpg" />
+    <Content Include="Content\Kendo\treelist\people\95.jpg" />
+    <Content Include="Content\Kendo\treelist\people\96.jpg" />
+    <Content Include="Content\Kendo\treelist\people\97.jpg" />
+    <Content Include="Content\Kendo\treelist\people\98.jpg" />
+    <Content Include="Content\Kendo\treelist\people\99.jpg" />
+    <Content Include="Content\Kendo\treeview\close.png" />
+    <Content Include="Content\Kendo\treeview\coloricons-sprite.png" />
+    <Content Include="Content\Kendo\treeview\edit.png" />
+    <Content Include="Content\Kendo\treeview\file.png" />
+    <Content Include="Content\Kendo\treeview\folder.png" />
+    <Content Include="Content\Kendo\treeview\icons-sprite.png" />
+    <Content Include="Content\Kendo\treeview\mail.png" />
+    <Content Include="Content\Kendo\treeview\readmail.png" />
+    <Content Include="Content\Kendo\treeview\search.png" />
+    <Content Include="Content\Kendo\treeview\settings.png" />
+    <Content Include="Content\Kendo\Uniform\editor.png" />
+    <Content Include="Content\Kendo\Uniform\imagebrowser.png" />
+    <Content Include="Content\Kendo\Uniform\indeterminate.gif" />
+    <Content Include="Content\Kendo\Uniform\loading-image.gif" />
+    <Content Include="Content\Kendo\Uniform\loading.gif" />
+    <Content Include="Content\Kendo\Uniform\loading_2x.gif" />
+    <Content Include="Content\Kendo\Uniform\markers.png" />
+    <Content Include="Content\Kendo\Uniform\markers_2x.png" />
+    <Content Include="Content\Kendo\Uniform\slider-h.gif" />
+    <Content Include="Content\Kendo\Uniform\slider-v.gif" />
+    <Content Include="Content\Kendo\Uniform\sprite.png" />
+    <Content Include="Content\Kendo\Uniform\sprite_2x.png" />
+    <Content Include="Content\Kendo\Uniform\sprite_kpi.png" />
+    <Content Include="Content\Kendo\Uniform\sprite_kpi_2x.png" />
+    <Content Include="Content\Kendo\upload\default.png" />
+    <Content Include="Content\Kendo\upload\doc.png" />
+    <Content Include="Content\Kendo\upload\jpg.png" />
+    <Content Include="Content\Kendo\upload\pdf.png" />
+    <Content Include="Content\Kendo\upload\xls.png" />
+    <Content Include="Content\Kendo\upload\zip.png" />
+    <Content Include="Content\Kendo\validator\tickets.png" />
+    <Content Include="Content\Kendo\validator\ticketsOnline.png" />
+    <Content Include="Content\Kendo\wave.png" />
+    <Content Include="Content\Kendo\window\ajax\606.jpg" />
+    <Content Include="Content\Kendo\window\ajax\ajaxContent.html" />
+    <Content Include="Content\Kendo\window\ajax\ajaxContent1.html" />
+    <Content Include="Content\Kendo\window\ajax\t-1000.jpg" />
+    <Content Include="Content\Kendo\window\armchair-402.png" />
+    <Content Include="Content\Kendo\window\egg-chair.png" />
+    <Content Include="Content\Kendo\window\kubus-armchair.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Kendo\16x16\Thumbs.db" />
+    <Content Include="Content\Kendo\24x24\Thumbs.db" />
+    <Content Include="Content\Kendo\32x32\Thumbs.db" />
+    <Content Include="Content\Kendo\48x48\Thumbs.db" />
+    <Content Include="Content\Kendo\datasource\internet-users.json" />
+    <Content Include="Content\Kendo\datasource\top250movies.json" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Content\Kendo\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Content\Kendo\fonts\glyphs\KendoUIGlyphs.eot" />
+    <Content Include="Content\Kendo\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <Content Include="Content\Kendo\fonts\glyphs\KendoUIGlyphs.woff" />
+    <Content Include="Content\Kendo\images\kendoui.ttf" />
+    <Content Include="Content\Kendo\images\kendoui.woff" />
+    <Content Include="Content\Kendo\spreadsheet\prices.json" />
+    <Content Include="Content\Kendo\spreadsheet\products.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1175</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1175/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
